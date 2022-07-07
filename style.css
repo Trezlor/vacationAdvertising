@@ -127,7 +127,7 @@ h2 {
 	margin: 0;
 	left: 0;
 	z-index: -1;
-	animation: 60s slider infinite;
+	animation: ease-out 80s slider infinite;
 }
 
 #slider figure img {
@@ -138,12 +138,12 @@ h2 {
 
 @keyframes slider {
 	0% {
-		left: 0;
+		left: 0%;
 	}
 	8% {
-		left: 0;
+		left: 0%;
 	}
-	14% {
+	20% {
 		left: -100%;
 	}
 	22% {
@@ -187,7 +187,7 @@ h2 {
 .exp-text {
 	display: grid;
 	margin: 10em 20% 2em;
-	grid-template-columns: 1.5fr 1fr;
+	grid-template-columns: 90fr 20fr;
 	font-size: 100%;
 	color: #1b6132;
 }
@@ -281,6 +281,11 @@ h2 {
 	cursor: pointer;
 }
 
+.inspiration h2 {
+	font-size: large;
+	margin: 0;
+}
+
 #places-to-eat {
 	grid-column-start: 2;
 	grid-row-start: 1;
@@ -299,9 +304,10 @@ h2 {
 .info {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	height: 15vh;
+	height: 250px;
 	background-color: rgb(63, 63, 63);
 	color: white;
+	margin: 0;
 }
 
 .info-text1 {
@@ -318,8 +324,27 @@ h2 {
 }
 
 .info-text3 {
-	grid-column-start: 5;
+	grid-column-start: 4;
 	margin: 0 10px;
 	display: flex;
 	align-items: center;
+}
+
+@media (min-width: 700px) {
+	.exp-text {
+		margin: 10em 27% 2em;
+		grid-template-columns: 1fr;
+	}
+
+	.experiences {
+		margin: 0 27%;
+	}
+
+	.inspiration {
+		margin: 0 27%;
+	}
+
+	.info {
+		grid-template-columns: 27% 1fr 1fr 27%;
+	}
 }
